@@ -1,6 +1,5 @@
 ---
 layout: public
-layout: public
 ---
 
 <div class="wrapper">
@@ -27,10 +26,10 @@ layout: public
         <div class="close-alchups">
             <h2>Otros aljibes</h2>
             <div class="close-alchups-items">
-              {% for other in page.others %}
-              <a href="/alchup/{{other.id}}" class="item">
-                <h4>{{other.title}}<i class="icon-arrow-right3"></i></h4>
-                <img src="{{other.image}}" alt="Foto de {{other.title}}">
+              {% for alchup in page.others %}
+              <a href="/alchup/{{alchup.id}}" class="item">
+                <h4>{{alchup.title}}<i class="icon-arrow-right3"></i></h4>
+                <img src="{{alchup.image}}" alt="Foto de {{alchup.title}}">
               </a>
               {% endfor %}
             </div>

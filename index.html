@@ -20,25 +20,25 @@ layout: public
       <span class="label">Ruta <strong>1</strong></span>
       <h2>De los lavaderos a las Forcas</h2>
       <p><img src="/img/home-ruta1.png" alt="Fotografías de la Ruta 1"></p>
-      <a href="route_path(1)" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
+      <a href="/ruta/1" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
     </div><!-- .route -->
     <div class="route">
       <span class="label">Ruta <strong>2</strong></span>
       <h2>De Perera a la Heredad</h2>
       <p><img src="/img/home-ruta2.png" alt="Fotografías de la Ruta 2"></p>
-      <a href="route_path(2)" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
+      <a href="/ruta/2" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
     </div><!-- .route -->
   </div>
 </div><!-- .wrapper -->
 
 <div class="wrapper">
   <div class="aljibes">
-    <h2>Además de las rutas, puedes conocer cada uno de los {{site.data.alchups | size}} aljibes localizados</h2>
+    <h2>Además de las rutas, puedes conocer cada uno de los {{site.alchups | size}} aljibes localizados</h2>
   
     <ol class="aljibes-list" id="alchups">
       {% for alchup in site.alchups %}
         <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_thumb}}">
-          <a href="alchup/{{alchup.id}}">{{alchup.title}}</a>
+          <a href="/alchup/{{alchup.id}}">{{alchup.title}}</a>
         </li>
       {% endfor %}
     </ol><!-- .aljibes-list -->
