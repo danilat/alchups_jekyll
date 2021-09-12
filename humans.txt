@@ -1,0 +1,25 @@
+/* TEAM */
+
+Designer: José Luis Lizano
+Twitter: @lizano
+Location: Zaragoza
+
+Frontend: Guillermo Latorre
+Web: http://guillermolatorre.com/
+Twitter: @superwillyfoc
+Location: Zaragoza & Fuentes de Ebro
+
+Developer: Razvan Puscas
+Twitter: @rpuscas94
+Location: Zaragoza
+                            
+Project Manager & Developer: Dani Latorre
+Web: http://www.danilat.com/
+Twitter: @dani_latorre
+Location: Zaragoza & San Esteban de Litera
+
+/* SITE */      
+Standards: HTML5, CSS3, Javascript
+Components: jQuery, Google Maps, Twitter Bootstrap, Restive, Bourbon, jQuery CookieBar
+Software: Jekyll, Visual Studio Code, Ruby on Rails, PostgreSQL, Sublime Text, Sass, Photoshop, Codekit
+Source Code (MIT Licensed): https://github.com/bierasolutions/alchups
