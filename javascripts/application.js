@@ -1,9 +1,4 @@
 
-//
-//= require jquery
-//= require jquery_ujs
-//= require jquery_minimalist_gallery
-//= require_tree .
 
 $(document).ready(function() {
   $.cookieBar({
@@ -173,7 +168,7 @@ $(document).ready(function() {
 		var marker = new google.maps.Marker({
 	    	position: new google.maps.LatLng(lati, longi),
         map: mapa,
-        icon: '/icono-mapa.png'
+        icon: '/img/icono-mapa.png'
 	    });
 
 	    return marker;
