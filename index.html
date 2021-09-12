@@ -33,13 +33,14 @@ layout: public
 
 <div class="wrapper">
   <div class="aljibes">
-    <h2>Además de las rutas, puedes conocer cada uno de los @tanks.size aljibes localizados</h2>
+    <h2>Además de las rutas, puedes conocer cada uno de los {{site.data.alchups | size}} aljibes localizados</h2>
+  
     <ol class="aljibes-list" id="alchups">
-      @tanks.each do |tank|
-        <li data-latitude="%= tank.latitude %" data-longitude="%= tank.longitude %" data-img="%= tank.main_photo%">
-          link_to tank.title, alchup_path(tank)
+      {% for alchup in site.data.alchups %}
+        <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_thumb}}">
+          <a href="alchup/{{alchup.id}}">{{alchup.title}}</a>
         </li>
-      end
+      {% endfor %}
     </ol><!-- .aljibes-list -->
   </div>
 </div><!-- .wrapper -->
