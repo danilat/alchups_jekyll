@@ -26,8 +26,8 @@
       <div class="wrapper">
         <nav class="main-menu">
           <ul>
-            <li><a href="">¿Qué son los Alchups?</a></li>
-            <li><a href="">El pueblo</a></li>
+            <li><a href="que-son">¿Qué son los Alchups?</a></li>
+            <li><a href="el-pueblo">El pueblo</a></li>
           </ul>
         </nav>
       </div>
@@ -35,6 +35,11 @@
       <!--%= yield :header %-->
       <h1><a href="/"><img link_to src="/img/logo.svg" width="295" height="32"></a></h1><br />
       <p>Descubre los Aljibes de San Esteban de la Litera</p>
+      {% if page.title %}
+      <div class="single-title">
+        <h1>{{page.title}}</h1>
+      </div>
+      {% endif %}
       </div><!-- .site-description -->
     </header>
 
@@ -52,8 +57,8 @@
             <ul>
               <li><a href="">De los lavaderos a las Forcas</a></li>
               <li><a href="">De Perera a la Heredad</a></li>
-              <li><a href="">¿Qué son los Alchups?</a></li>
-              <li><a href="">El pueblo</a></li>
+              <li><a href="que-son">¿Qué son los Alchups?</a></li>
+              <li><a href="el-pueblo">El pueblo</a></li>
               <li><a href="http://www.sanestebandelitera.es/">Web municipal</a></li>
               <li><a href="mailto:sanesteban@lalitera.org">Email: sanesteban@lalitera.org</a></li>
             </ul>
