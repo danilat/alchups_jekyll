@@ -1,0 +1,70 @@
+---
+layout: public
+title: Alchup de Perera
+description: Ubicado en la partida de Perera es el más grande y espectacular de todos los localizados en el término municipal de San Esteban de Litera. Sus dimensiones son 23x8,3x6 metros y su capacidad es de 900.000 litros. Cuenta con escaleras.
+route: 2
+latitude: 41.893141080168975432653969790474145515077468398102013092170513042562201680578963341535852055590542394990336882691262655145615396402749608040262722441471763413824123986878978781175537616096598783559993348366547310098710296
+longitude: 0.32115624178932993299584974406742028051083843980749878740887512758627350268635158528441719714344923562264900776817910699005307985839852899846832211525840397124012653983432988168
+main_image: http://s3-eu-west-1.amazonaws.com/alchups/photos/images/000/000/048/large/Alchup_de_Pereraok.jpg?1441880348
+images:
+  - thumb: http://s3-eu-west-1.amazonaws.com/alchups/photos/images/000/000/048/thumb/Alchup_de_Pereraok.jpg?1441880348
+    large: http://s3-eu-west-1.amazonaws.com/alchups/photos/images/000/000/048/large/Alchup_de_Pereraok.jpg?1441880348
+  - thumb: http://s3-eu-west-1.amazonaws.com/alchups/photos/images/000/000/074/thumb/Perera_3.jpg?1441880482
+    large: http://s3-eu-west-1.amazonaws.com/alchups/photos/images/000/000/074/large/Perera_3.jpg?1441880482
+  - thumb: http://s3-eu-west-1.amazonaws.com/alchups/photos/images/000/000/073/thumb/perera_2.jpg?1441880479
+    large: http://s3-eu-west-1.amazonaws.com/alchups/photos/images/000/000/073/large/perera_2.jpg?1441880479
+
+others:
+  - id: 102
+    title: Alchups de la Sierra 2
+    image: http://s3-eu-west-1.amazonaws.com/alchups/photos/images/000/000/010/medium/DSC_0585.JPG?1441880143
+---
+
+<div class="wrapper">
+      <div class="single-image">
+        <img id="header_img" alt="{{page.title}}" src="{{page.main_image}}" />
+        <div class="image-selector">
+            {% for image in page.images %}
+            <a href="{{image.large}}" class="item"><img src="{{image.thumb}}" alt="Foto de {{page.title}}" /></a>
+            {% endfor %}
+        </div>
+      </div><!-- .single-image -->
+
+        <div class="single-content">
+            {% if page.route %}<div class="belong-route"><span class="label ruta{{page.route}}"><a href="/ruta/{{page.route}}"> Pertenece a<br />ruta <strong>{{page.route}}</strong> &gt;</a></span></div>{% endif %}
+            <div class="content" id="description" data-latitude="{{page.latitude}}" data-longitude="{{page.longitude}}">
+                <p>{{page.description}}</p>
+                <br/><br/>
+                <div id="map-canvas" class="map">
+                </div>
+              </div>
+        </div><!-- .single-content -->
+
+
+        <div class="close-alchups">
+            <h2>Otros aljibes</h2>
+            <div class="close-alchups-items">
+              {% for other in page.others %}
+              <a href="/alchup/{{other.id}}" class="item">
+                <h4>{{other.title}}<i class="icon-arrow-right3"></i></h4>
+                <img src="{{other.image}}" alt="Foto de {{other.title}}">
+              </a>
+              {% endfor %}
+            </div>
+          </div><!-- .close-alchups-->
+
+          <div class="routes">
+            <div class="route">
+              <span class="label">Ruta <strong>1</strong></span>
+              <h2>De los lavaderos a las Forcas</h2>
+              <p><img alt="Fotografías de la Ruta 1" src="/img/home-ruta1.png" /></p>
+              <a href="/ruta/1" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
+            </div><!-- .route -->
+            <div class="route">
+              <span class="label">Ruta <strong>2</strong></span>
+              <h2>De Perera a la Heredad</h2>
+              <p><img alt="Fotografías de la Ruta 2" src="/img/home-ruta2.png" /></p>
+              <a href="/ruta/2" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
+            </div><!-- .route -->
+          </div>  
+        </div><!-- .wrapper -->
