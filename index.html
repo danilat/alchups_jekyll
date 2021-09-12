@@ -1,0 +1,45 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: public
+---
+
+<div class="main-map" id="home">
+      <div id="map-canvas" style="height: 620px;"></div>
+</div><!-- main-map -->
+<div class="main-description">
+  <div class="wrapper">
+    <em><strong>Alchup</strong></em> es la transcripción fonética empleada en la Litera del vocablo <em><strong>aljub</strong></em> utilizado ya en los documentos redactados en castellano en San Esteban de Litera en el 1579. Esta palabra sigue viva en el catalán actual y designa un depósito excavado en la roca o hecho con piedra y cubierto con bóveda para recoger y almacenar el agua de lluvia, aunque en la comarca de La Litera son depósitos sin esta cubierta. Tiene su equivalente al aljibe castellano, o cisterna, que es el depósito subterráneo donde se recoge y conserva el agua. Los más antiguos se construyeron entre los años 714 y 1149 de nuestra era, ya que junto a algunos aparecen fragmentos de cerámica islámica procedentes de su limpieza. Se sabe, por la documentación notarial conservada, que muchos ya existían en la zona de Albelda a mediados del siglo XVI. Posteriormente se siguieron construyendo, ampliando o reformando hasta finales del siglo XIX, como es el caso del gran alchup de Perera, que se construyó en el año 1579 al encargar el concejo municipal, unir en uno solo dos de ya existentes. Definitivamente, se amplió en el año 1892 hasta alcanzar una longitud de 21,37 m.
+  </div><!-- .wrapper -->
+</div><!-- main-description -->
+
+<div class="wrapper">
+  <div class="routes">
+    <div class="route">
+      <span class="label">Ruta <strong>1</strong></span>
+      <h2>De los lavaderos a las Forcas</h2>
+      <p><img src="/img/home-ruta1.png" alt="Fotografías de la Ruta 1"></p>
+      <a href="route_path(1)" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
+    </div><!-- .route -->
+    <div class="route">
+      <span class="label">Ruta <strong>2</strong></span>
+      <h2>De Perera a la Heredad</h2>
+      <p><img src="/img/home-ruta2.png" alt="Fotografías de la Ruta 2"></p>
+      <a href="route_path(2)" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
+    </div><!-- .route -->
+  </div>
+</div><!-- .wrapper -->
+
+<div class="wrapper">
+  <div class="aljibes">
+    <h2>Además de las rutas, puedes conocer cada uno de los @tanks.size aljibes localizados</h2>
+    <ol class="aljibes-list" id="alchups">
+      @tanks.each do |tank|
+        <li data-latitude="%= tank.latitude %" data-longitude="%= tank.longitude %" data-img="%= tank.main_photo%">
+          link_to tank.title, alchup_path(tank)
+        </li>
+      end
+    </ol><!-- .aljibes-list -->
+  </div>
+</div><!-- .wrapper -->
