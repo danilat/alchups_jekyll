@@ -36,7 +36,7 @@ layout: public
     <h2>Además de las rutas, puedes conocer cada uno de los {{site.data.alchups | size}} aljibes localizados</h2>
   
     <ol class="aljibes-list" id="alchups">
-      {% for alchup in site.data.alchups %}
+      {% for alchup in site.alchups %}
         <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_thumb}}">
           <a href="alchup/{{alchup.id}}">{{alchup.title}}</a>
         </li>
