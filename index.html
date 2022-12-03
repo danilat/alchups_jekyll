@@ -37,8 +37,8 @@ layout: public
   
     <ol class="aljibes-list" id="alchups">
       {% for alchup in site.alchups %}
-        <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_thumb}}">
-          <a href="/alchup/{{alchup.id}}">{{alchup.title}}</a>
+        <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_photo_thumb}}">
+          <a href="{{alchup.id}}">{{alchup.title}}</a>
         </li>
       {% endfor %}
     </ol><!-- .aljibes-list -->

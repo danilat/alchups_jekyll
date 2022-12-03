@@ -44,10 +44,10 @@ layout: public
             <li>Comunica rápidamente cualquier incidencia al teléfono de emergencia <b>112</b></li>.
             </ul>
             <div class="single-image">
-              <img src="{{page.alchups.first.main_image}}" id="header_img">
+              <img src="{{page.alchups.first.main_photo}}" id="header_img">
               <div class="image-selector">
                 {% for alchup in page.alchups %}
-                <a href="{{alchup.main_image}}" class="item"><img src="{{alchup.main_thumb}}"></a>
+                <a href="{{alchup.main_photo}}" class="item"><img src="{{alchup.main_photo_thumb}}"></a>
                 {% endfor %}
               </div>
             </div><!-- .single-image -->
@@ -58,7 +58,7 @@ layout: public
     <h2>La ruta <span id="route" data-id="{{page.number}}">{{page.title}}</span> tiene {{page.alchups | size}} aljibes localizados</h2>
     <ol class="aljibes-list" id="alchups">
         {% for alchup in page.alchups %}
-        <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_thumb}}">
+        <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_photo_thumb}}">
             <a href="/alchup/{{alchup.number}}">{{alchup.title}}</a>
         </li>
         {% endfor %}
