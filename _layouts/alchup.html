@@ -3,27 +3,28 @@ layout: public
 ---
 
 <div class="wrapper">
-      <div class="single-image">
-        <img id="header_img" alt="{{page.title}}" src="{{page.main_photo}}" />
-        <div class="image-selector">
-            {% for photo in page.photos %}
-            <a href="{{photo.large}}" class="item"><img src="{{photo.thumb}}" alt="Foto de {{page.title}}" /></a>
-            {% endfor %}
-        </div>
-      </div><!-- .single-image -->
+  <div class="single-image">
+    <img id="header_img" alt="{{page.title}}" src="{{page.main_photo}}" />
+    <div class="image-selector">
+      {% for photo in page.photos %}
+      <a href="{{photo.large}}" class="item"><img src="{{photo.thumb}}" alt="Foto de {{page.title}}" /></a>
+      {% endfor %}
+    </div>
+  </div><!-- .single-image -->
 
-        <div class="single-content">
-            {% if page.route %}<div class="belong-route"><span class="label ruta{{page.route}}"><a href="/ruta/{{page.route}}"> Pertenece a<br />ruta <strong>{{page.route}}</strong> &gt;</a></span></div>{% endif %}
-            <div class="content" id="description" data-latitude="{{page.latitude}}" data-longitude="{{page.longitude}}">
-                <p>{{page.description}}</p>
-                <br/><br/>
-                <div id="map-canvas" class="map">
-                </div>
-              </div>
-        </div><!-- .single-content -->
+  <div class="single-content">
+    {% if page.route %}<div class="belong-route"><span class="label ruta{{page.route}}"><a href="/ruta/{{page.route}}">
+          Pertenece a<br />ruta <strong>{{page.route}}</strong> &gt;</a></span></div>{% endif %}
+    <div class="content" id="description" data-latitude="{{page.latitude}}" data-longitude="{{page.longitude}}">
+      <p>{{page.description}}</p>
+      <br /><br />
+      <div id="map-canvas" class="map">
+      </div>
+    </div>
+  </div><!-- .single-content -->
 
 
-        <div class="close-alchups">
+  <!--div class="close-alchups">
             <h2>Otros aljibes</h2>
             <div class="close-alchups-items">
               {% for alchup in page.others %}
@@ -33,20 +34,21 @@ layout: public
               </a>
               {% endfor %}
             </div>
-          </div><!-- .close-alchups-->
+          </div-->
+  <!-- .close-alchups-->
 
-          <div class="routes">
-            <div class="route">
-              <span class="label">Ruta <strong>1</strong></span>
-              <h2>De los lavaderos a las Forcas</h2>
-              <p><img alt="Fotografías de la Ruta 1" src="/img/home-ruta1.png" /></p>
-              <a href="/ruta/1" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
-            </div><!-- .route -->
-            <div class="route">
-              <span class="label">Ruta <strong>2</strong></span>
-              <h2>De Perera a la Heredad</h2>
-              <p><img alt="Fotografías de la Ruta 2" src="/img/home-ruta2.png" /></p>
-              <a href="/ruta/2" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
-            </div><!-- .route -->
-          </div>  
-        </div><!-- .wrapper -->
+  <div class="routes">
+    <div class="route">
+      <span class="label">Ruta <strong>1</strong></span>
+      <h2>De los lavaderos a las Forcas</h2>
+      <p><img alt="Fotografías de la Ruta 1" src="/img/home-ruta1.png" /></p>
+      <a href="/ruta/1" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
+    </div><!-- .route -->
+    <div class="route">
+      <span class="label">Ruta <strong>2</strong></span>
+      <h2>De Perera a la Heredad</h2>
+      <p><img alt="Fotografías de la Ruta 2" src="/img/home-ruta2.png" /></p>
+      <a href="/ruta/2" class="btn primary">Quiero conocer esta ruta <span class="arrow">›</span></a>
+    </div><!-- .route -->
+  </div>
+</div><!-- .wrapper -->

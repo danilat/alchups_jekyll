@@ -2,66 +2,70 @@
 layout: public
 ---
 <div class="single-ruta-image">
-<img src="/img{{page.id}}.png" alt="Imagen previa de la ruta {{page.id}}">
+  <img src="/img{{page.id}}.png" alt="Imagen previa de la ruta {{page.id}}">
 </div><!-- .single-ruta-image -->
 <div class="wrapper">
-<div class="single-content">
+  <div class="single-content">
 
-          <div class="content">
-            <div id="map-canvas" class="map">
-            </div>
-            <p>
-            {{page.description}}
-            </p>
-            <h2>Descárgate:</h2>
-            <ul>
-              <li><a href="/downloads{{page.id}}.kml">La ruta en KML</a>.</li>
-              <li><a href="/downloads{{page.id}}.pdf">El panel informativo de la ruta en PDF</a>.</li>
-            </ul>
-            <h2>Dificultad:</h2>
-            <p>
-            Dificultad Media. Ruta con una dificultad no muy elevada.
-            </p>
+    <div class="content">
+      <div id="map-canvas" class="map">
+      </div>
+      <p>
+        {{page.description}}
+      </p>
+      <h2>Descárgate:</h2>
+      <ul>
+        <li><a href="/downloads{{page.id}}.kml">La ruta en KML</a>.</li>
+        <li><a href="/downloads{{page.id}}.pdf">El panel informativo de la ruta en PDF</a>.</li>
+      </ul>
+      <h2>Dificultad:</h2>
+      <p>
+        Dificultad Media. Ruta con una dificultad no muy elevada.
+      </p>
 
-            <h2>Ruta indicada para:</h2>
-            <ul>
-            <li>Senderismo con niños o en familia.</li>
-            <li>Senderismo.</li>
-            <li>Bicicleta de montaña.</li>
-            <li>A caballo.</li>
-            </ul>
+      <h2>Ruta indicada para:</h2>
+      <ul>
+        <li>Senderismo con niños o en familia.</li>
+        <li>Senderismo.</li>
+        <li>Bicicleta de montaña.</li>
+        <li>A caballo.</li>
+      </ul>
 
-            <h2>A tener en cuenta:</h2>
-            <ul>
-            <li>No olvides planificar tu ruta (horario, metereología, etc.) y llevar el equipamiento necesario (calzado y ropa adecuada, agua, etc.).</li>
-            <li>Respeta la fauna y flora, no arranques las plantas ni asustes a los animales.</li>
-            <li>Disfruta del camino, intentando identificar flora y fauna, y de los paisajes repletos de contrastes que encontrarás.</li>
-            <li>No olvides tus prismáticos y tu cámara de fotos.</li>
-            <li>No tires basura. Queremos ver tu pisada no tu huella.</li>
-            <li>No hagas fuego. Respeta los caminos y senderos.</li>
-            <li>Cruza las tierras de cultivo por los senderos y nunca por la zona sembrada.</li>
-            <li>Sigue y respeta las señales. En época de caza respeta las acotaciones.</li>
-            <li>Comunica rápidamente cualquier incidencia al teléfono de emergencia <b>112</b></li>.
-            </ul>
-            <div class="single-image">
-              <img src="{{page.alchups.first.main_photo}}" id="header_img">
-              <div class="image-selector">
-                {% for alchup in page.alchups %}
-                <a href="{{alchup.main_photo}}" class="item"><img src="{{alchup.main_photo_thumb}}"></a>
-                {% endfor %}
-              </div>
-            </div><!-- .single-image -->
-          </div>
-        </div><!-- .single-content -->
+      <h2>A tener en cuenta:</h2>
+      <ul>
+        <li>No olvides planificar tu ruta (horario, metereología, etc.) y llevar el equipamiento necesario (calzado y
+          ropa adecuada, agua, etc.).</li>
+        <li>Respeta la fauna y flora, no arranques las plantas ni asustes a los animales.</li>
+        <li>Disfruta del camino, intentando identificar flora y fauna, y de los paisajes repletos de contrastes que
+          encontrarás.</li>
+        <li>No olvides tus prismáticos y tu cámara de fotos.</li>
+        <li>No tires basura. Queremos ver tu pisada no tu huella.</li>
+        <li>No hagas fuego. Respeta los caminos y senderos.</li>
+        <li>Cruza las tierras de cultivo por los senderos y nunca por la zona sembrada.</li>
+        <li>Sigue y respeta las señales. En época de caza respeta las acotaciones.</li>
+        <li>Comunica rápidamente cualquier incidencia al teléfono de emergencia <b>112</b></li>.
+      </ul>
+      <div class="single-image">
+        <img src="{{page.alchups.first.main_photo}}" id="header_img">
+        <div class="image-selector">
+          {% for alchup in page.alchups %}
+          <a href="{{alchup.main_photo}}" class="item"><img src="{{alchup.main_photo_thumb}}"></a>
+          {% endfor %}
+        </div>
+      </div><!-- .single-image -->
+    </div>
+  </div><!-- .single-content -->
 
   <div class="aljibes">
-    <h2>La ruta <span id="route" data-id="{{page.id}}">{{page.title}}</span> tiene {{page.alchups | size}} aljibes localizados</h2>
+    <h2>La ruta <span id="route" data-id="{{page.id}}">{{page.title}}</span> tiene {{page.alchups | size}} aljibes
+      localizados</h2>
     <ol class="aljibes-list" id="alchups">
-        {% for alchup in page.alchups %}
-        <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_photo_thumb}}">
-            <a href="/alchup/{{alchup.id}}">{{alchup.title}}</a>
-        </li>
-        {% endfor %}
+      {% for alchup in page.alchups %}
+      <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}"
+        data-img="{{alchup.main_photo_thumb}}">
+        <a href="/alchup/{{alchup.id}}">{{alchup.title}}</a>
+      </li>
+      {% endfor %}
     </ol><!-- .aljibes-list -->
   </div>
 </div><!-- .wrapper -->
