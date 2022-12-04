@@ -2,7 +2,7 @@
 layout: public
 ---
 <div class="single-ruta-image">
-<img src="/img/ruta{{page.number}}.png" alt="Imagen previa de la ruta {{page.number}}">
+<img src="/img{{page.id}}.png" alt="Imagen previa de la ruta {{page.id}}">
 </div><!-- .single-ruta-image -->
 <div class="wrapper">
 <div class="single-content">
@@ -55,11 +55,11 @@ layout: public
         </div><!-- .single-content -->
 
   <div class="aljibes">
-    <h2>La ruta <span id="route" data-id="{{page.number}}">{{page.title}}</span> tiene {{page.alchups | size}} aljibes localizados</h2>
+    <h2>La ruta <span id="route" data-id="{{page.id}}">{{page.title}}</span> tiene {{page.alchups | size}} aljibes localizados</h2>
     <ol class="aljibes-list" id="alchups">
         {% for alchup in page.alchups %}
         <li data-latitude="{{alchup.latitude}}" data-longitude="{{alchup.longitude}}" data-img="{{alchup.main_photo_thumb}}">
-            <a href="/alchup/{{alchup.number}}">{{alchup.title}}</a>
+            <a href="/alchup/{{alchup.id}}">{{alchup.title}}</a>
         </li>
         {% endfor %}
     </ol><!-- .aljibes-list -->
