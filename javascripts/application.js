@@ -7,7 +7,10 @@ $(document).ready(function() {
     autoEnable: false,
     acceptOnContinue: false,
     acceptOnScroll: true,
-    acceptAnyClick: true
+    acceptAnyClick: true,
+    policyButton: true,
+    policyText: 'Política de cookies',
+    policyURL: '/cookies',
   });
   if(jQuery.cookieBar('cookies')){
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
